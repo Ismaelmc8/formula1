@@ -1,0 +1,52 @@
+.card-carousel{
+  margin: 1em;
+}
+
+.slick-track {
+  transition: transform 0.5s ease-out; /* Añade una transición suave */
+}
+
+.slick-center .slick-slide {
+  transform: translate3d(-200px, 0, 0); /* Ajusta el valor según tus necesidades */
+}
+
+.hover-image{
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    max-width: 100%;
+}
+
+.backgroud-image{
+  transition: transform cubic-bezier(.35,0,0,1);
+  /* background-color: rgba(0, 0, 0, 0.2); */
+}
+
+.images {
+  -webkit-mask-box-image-width: 0, 12px, 12px, 12px;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  -webkit-mask-box-image: rgba(0,0,0,1) 12 stretch;
+  border-radius: 0.375rem;
+}
+
+.card-img{
+  border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.slick-slide .image-flag{
+  display: inline-block;
+  height: 1rem;
+}
