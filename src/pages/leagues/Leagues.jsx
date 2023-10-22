@@ -2,10 +2,10 @@ import React from 'react'
 import { Container, Row, Col, Table, Button, Card, Form } from 'react-bootstrap'
 import { AiOutlinePlus } from 'react-icons/ai'
 import './leagues.css'
-
+import PopupCreate from '../../components/popup-create/PopupCreate';
 function Leagues() {
   let createPopUp = false;
-  let joinPopUp = false;
+  let joinPopUp = true;
   return (
     <Container>
       <Row>
@@ -54,33 +54,7 @@ function Leagues() {
           </Row>
         </Col>
       </Row>
-      <Row className='popup-card'>
-        <Col className='width-popup-slim mx-auto'>
-          <Card className='text-center p-5'>
-            <Card.Title className='mb-4'>Crear una Liga</Card.Title>
-            <Card.Subtitle className='mb-2'>Cre una liga e invita a tus amigos</Card.Subtitle>
-            <Form className='text-start'>
-              <Form.Group className='mb-3'>
-                <Form.Label>Nombre de la liga:</Form.Label>
-                <Form.Control
-                 type='text'/>
-              </Form.Group>
-              <Row>
-                <Col className='d-grid'>
-                  <Button variant='danger'>
-                    Cancel
-                  </Button>
-                </Col>
-                <Col className='d-grid'>
-                  <Button variant='success'>
-                    Create
-                  </Button>
-                </Col>
-              </Row>
-            </Form>
-          </Card>
-        </Col>
-      </Row>
+      {joinPopUp ? < PopupCreate/> :<></>}
     </Container>
   )
 }
